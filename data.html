@@ -35,7 +35,7 @@
             async() => {
                 // This creates an anonymous async function that immediately executes.
 
-                let workbook = XLSX.read(await (await fetch("./silver_rate_live.xlsx")).arrayBuffer());
+                let workbook = XLSX.read(await (await fetch("silver_rate_live.xlsx")).arrayBuffer());
                 // This line uses the fetch API to download the Excel file named "excel.xlsx" and reads it using the xlsx library.
                 // The result is stored in the workbook variable.
 
