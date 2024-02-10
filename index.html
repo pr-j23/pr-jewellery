@@ -46,10 +46,10 @@
                 // The SheetNames property of the workbook object returns an array of sheet names.
                 // Here, we are storing the sheet names in the worksheet variable.
 
-                worksheet.forEach(name => {
+                // worksheet.forEach(name => {
                     // This is a forEach loop that iterates over each sheet name.
 
-                    let html = XLSX.utils.sheet_to_html(workbook.Sheets[name]);
+                    let html = XLSX.utils.sheet_to_html(workbook.Sheets[worksheet[0]]);
                     // This line converts the sheet data to HTML using the sheet_to_html() method provided by the xlsx library.
                     // The result is stored in the html variable.
 
@@ -58,7 +58,7 @@
                     <h3>${name}</h3>${html}
                     `;
                     // This line appends the sheet name and its HTML representation to the table div using template literals.
-                })
+                // })
             }
         )()
         // This immediately invoked function expression (IIFE) executes the code inside it as soon as it is defined.
@@ -67,4 +67,3 @@
 </body>
  
 </html>
-
